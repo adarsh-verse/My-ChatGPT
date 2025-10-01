@@ -1,5 +1,5 @@
 import ChatSection from "./components/ChatSection/ChatSection"
-import Seperation from "./components/Seperation/Seperation"
+import Separation from "./components/Separation/Separation"
 import Sidebar from "./components/SideBar/Sidebar"
 
 function App() {
@@ -7,9 +7,8 @@ function App() {
   return (
     <>
     <Sidebar/>
-    <Seperation/>
+    <Separation/>
     <ChatSection/>
-    
     </>
   )
 }

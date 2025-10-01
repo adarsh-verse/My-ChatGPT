@@ -1,9 +1,10 @@
 .sidebar{
     padding: 20px 10px;
     height: 100vh;
+    max-width: 15%;
     overflow: auto;
-    background-color: rgb(22,32,33);
-    color: white;
+    background-color:var(--background-color);
+    color:var(--color);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -13,7 +14,7 @@
 .sidebar svg{
     width: 30px;
     height: 30px;
-    color: white;
+    color:var(--color);
 }
 #ham{
     margin-left: 10px;
@@ -24,12 +25,11 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: rgb(127,131,134);
+    background-color: rgb(171, 176, 180);
     padding: 15px;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.2s;
-
 }
 .recent{
     display: flex;
@@ -42,8 +42,8 @@
     transition: all 0.2s;
 }
 .recent:hover{
-    background-color: rgb(82,85,86);
+    background-color: rgb(128,133,134);
 }
 .newChat:hover{
-    background-color: rgb(82,85,86);
+    background-color: rgb(128,133,134);
 }

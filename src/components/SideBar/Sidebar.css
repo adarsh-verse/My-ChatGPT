@@ -1,7 +1,7 @@
 .sidebar{
     padding: 20px 10px;
     height: 100vh;
-    max-width: 15%;
+    /* max-width: 15%; */
     overflow: auto;
     background-color:var(--background-color);
     color:var(--color);
@@ -10,6 +10,7 @@
     align-items: start;
     gap: 20px;
     font-size: 20px;
+    scrollbar-width: none;
 }
 .sidebar svg{
     width: 30px;

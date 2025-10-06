@@ -50,7 +50,7 @@ function ChatSection() {
               sent(input)
             else console.log('na');
           }
-        }} onChange={(e) => { setInput(e.target.value) }} type="text" placeholder='Enter a Prompt' value={input} />
+        }} onChange={(e) => { setInput(e.target.value) }} type="text" placeholder='Ask Adarsh-GPT' value={input} />
         {input ?
           <button id='sendbtn' onClick={() => {
             if (input.length > 0)
@@ -59,6 +59,7 @@ function ChatSection() {
           }}><TbSend2 /></button> : null}
         <Darkmode />
       </div>
+      <h1 className="disclaimer">Adarsh GPT can make mistakes!</h1>
     </div>
   )
 }

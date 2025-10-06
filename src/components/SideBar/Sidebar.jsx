@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPlus } from "react-icons/fa6";
 import { FaRegMessage } from "react-icons/fa6";
+import { FaTrash } from "react-icons/fa";
+
 
 // import { BsTrash } from "react-icons/bs";
 import "./Sidebar.css"
@@ -58,7 +60,7 @@ function Sidebar() {
             e.stopPropagation()
             deleteChat(item.id);
           }}>
-            🗑️
+            <FaTrash  />
           </button>
         </div>
 

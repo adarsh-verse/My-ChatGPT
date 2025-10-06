@@ -29,6 +29,7 @@ function UserContext({ children }) {
 
         let result = await AIResponse(input)
         result = result.split("**") && result.split("*")
+        
 
         setResponse(result)
         setLoading(false)

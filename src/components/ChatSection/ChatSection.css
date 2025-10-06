@@ -1,20 +1,23 @@
-.chatsection{
-    background-color:var(--background-color);
+.chatsection {
+    background-color: var(--background-color);
     height: 100vh;
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
-.topsection{
+
+.topsection {
     width: 100%;
-    height: 75vh;
-    /* flex: 1; */
-    /* overflow-y: auto; */
-    /* scrollbar-width: none; */
+    /* height: 75vh; */
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
     padding: 20px;
     box-sizing: border-box;
 }
-.bottomsection{
+
+.bottomsection {
     width: 100%;
     flex-shrink: 0;
     height: 25vh;
@@ -22,11 +25,15 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding: 10px 20px;
+
 }
-span{
+
+span {
     color: var(--color);
 }
-.heading{
+
+.heading {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -37,27 +44,31 @@ span{
     flex-direction: column;
     font-size: 2vmax;
 }
-.heading span:nth-child(1){
+
+.heading span:nth-child(1) {
     font-size: 4em;
     font-weight: 600;
     background: linear-gradient(to right, rgb(222, 19, 101), rgb(89, 190, 215), rgb(194, 193, 193));
     background-clip: text;
     color: transparent;
 }
-.heading span:nth-child(2){
+
+.heading span:nth-child(2) {
     font-size: 2.9em;
     font-weight: 600;
     background: linear-gradient(to right, rgb(19, 198, 222), rgb(225, 19, 100), rgb(194, 193, 193));
     background-clip: text;
     color: transparent;
 }
-.heading span:nth-child(3){
+
+.heading span:nth-child(3) {
     font-size: 1.5em;
     background-clip: text;
-    color:var(--color);
+    color: var(--color);
     opacity: 0.8;
 }
-.bottomsection input{
+
+.bottomsection input {
     width: 50%;
     height: 60px;
     padding: 20px;
@@ -69,7 +80,8 @@ span{
     border: none;
     box-shadow: 2px 2px 10px black;
 }
-#sendbtn{
+
+#sendbtn {
     width: 60px;
     height: 60px;
     padding: 10px;
@@ -80,34 +92,90 @@ span{
     cursor: pointer;
     box-shadow: 2px 2px 10px black;
 }
-#sendbtn:hover{
+
+#sendbtn:hover {
     background-color: var(--hover-btn-background-color);
 }
-#sendbtn svg{
+
+#sendbtn svg {
     width: 30px;
     height: 30px;
     color: var(--btn-color);
 }
-.userbox{
+
+.userbox {
     display: flex;
     gap: 20px;
     align-items: start;
     color: var(--color);
+    width: 100%;
+    flex-wrap: wrap;
 }
-.aibox{
+
+.aibox {
     display: flex;
     gap: 20px;
     align-items: start;
     color: var(--color);
+    width: 100%;
+    flex-direction: row;
 }
-.aibox p{
+
+.userbox img,
+.aibox img {
+    flex-shrink: 0;
+}
+
+.aibox .markdown-output {
     width: 100%;
     /* height: 400px; */
     max-height: 60vh;
     overflow-y: auto;
     scrollbar-width: none;
+    padding-right: 5px;
+    box-sizing: border-box;
 }
-.result{
+
+.markdown-output {
+  width: 100%;          
+  max-height: 60vh;       
+  overflow-y: auto;        
+  color: var(--color);
+  font-family: 'Courier New', monospace;
+  background: transparent;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding-right: 5px;
+}
+
+
+.markdown-output code {
+  word-break: break-word;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+  display: inline-block; 
+}
+
+
+.markdown-output pre {
+  width: 100%;             
+  max-width: 100%;       
+  overflow-x: auto;        
+  white-space: pre-wrap;   
+  word-break: break-word;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+
+.result {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -116,40 +184,91 @@ span{
     padding: 40px 20px;
     font-size: 20px;
 }
-.result img{
+
+.result img {
     filter: drop-shadow(2px 2px 10px black);
 }
-.loader{
+
+.loader {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.loader hr{
+
+.loader hr {
     height: 20px;
     border: none;
     background-color: aliceblue;
     border-radius: 20px;
-    background: linear-gradient(to right, rgb(118, 210, 215),var(--background-color),rgb(118, 210, 215));
+    background: linear-gradient(to right, rgb(118, 210, 215), var(--background-color), rgb(118, 210, 215));
     background-size: 800px 50px;
-    animation: loader 1.8s linear infinite ;
+    animation: loader 1.8s linear infinite;
 }
-@keyframes loader{
-    0%{
+
+@keyframes loader {
+    0% {
         background-position: -800px 0px;
     }
-    100%{
+
+    100% {
         background-position: 800px 0px;
     }
 }
 
-@media (max-width:800px) {
-    .heading{
-        font-size: 1.5vmax;
-        padding: 10px;
-    }
-    .aibox p{
-        max-height: 50vh;
-    }
-    
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 1.5vmax;
+    padding: 10px;
+  }
+
+  .aibox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aibox .markdown-output {
+    max-height: 50vh;
+    font-size: 0.9em;
+  }
+  .markdown-output code{
+    width: 100%;
+  }
+
+  .bottomsection input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottomsection {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .bottomsection input {
+    width: 90%;
+  }
+
+  .markdown-output {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .markdown-output {
+    font-size: 0.8em;
+  }
+
+  .bottomsection input {
+    height: 50px;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  #sendbtn {
+    width: 50px;
+    height: 50px;
+  }
 }

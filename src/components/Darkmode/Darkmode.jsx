@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { TiWeatherSunny } from "react-icons/ti";
+import { FaRegMoon } from "react-icons/fa6";
+
 import "./Darkmode.css" 
 
 function Darkmode() {
@@ -15,7 +17,7 @@ function Darkmode() {
     <div>
       <button className='darkmodebtn' onClick={()=>{
         toggle()
-    }}><TiWeatherSunny /></button>
+    }}>{mode==="darkmode"?<TiWeatherSunny />:<FaRegMoon />}</button>
     </div>
   )
 }

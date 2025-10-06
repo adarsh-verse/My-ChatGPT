@@ -19,9 +19,9 @@ function ChatSection() {
       <div className="topsection">
 
         {!showResult ? <div className="heading">
-          <span>HELLO ADARSH,</span>
+          <span>WELCOME TO ADARSH GPT,</span>
           <span>I'm Your Own Assistant</span>
-          <span>What Can I Help You... ?</span>
+          <span>What can I help with?</span>
         </div> : <div className='result'>
           <div className="userbox" >
             <img src={user} alt="" width="35px" />
